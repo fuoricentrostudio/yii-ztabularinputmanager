@@ -1,7 +1,7 @@
 Yii Tabular Input Manager
 ========================
 
-#Original implementation of Yii Tabular Input Manager as of http://www.yiiframework.com/extension/ztabularinputmanager with @dastra improovements
+### Original implementation of Yii Tabular Input Manager as of http://www.yiiframework.com/extension/ztabularinputmanager with @dastra improovements
 
 This is a Yii parent class for a Tabular input manager
 
