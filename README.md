@@ -1,5 +1,7 @@
-yii-ztabularinputmanager
+Yii Tabular Input Manager
 ========================
+
+#Original implementation of Yii Tabular Input Manager as of http://www.yiiframework.com/extension/ztabularinputmanager with @dastra improovements
 
 This is a Yii parent class for a Tabular input manager
 
@@ -113,7 +115,7 @@ In this example, the controller code would look like this:
 public function actionCreate()
 {
     $classroom = new Classroom();
-    $studentManager=new StudentManager($classroom);
+    $studentManager= StudentManager::load($classroom);
 
     // Uncomment the following line if AJAX validation is needed
     // $this->performAjaxValidation($model);
