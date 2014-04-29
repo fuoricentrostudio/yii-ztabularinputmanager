@@ -144,8 +144,9 @@ public function actionCreate()
 }
 
 /**
- * Create a new model.
- * If creation is successful, the browser will be redirected to the 'view' page.
+ * Updates a particular model.
+ * If update is successful, the browser will be redirected to the 'view' page.
+ * @param integer $id the ID of the model to be updated
  */
 public function actionUpdate()
 {
