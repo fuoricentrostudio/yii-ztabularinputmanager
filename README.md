@@ -14,13 +14,13 @@ Installation
 
 Download TabularInputManager.php and save it in your protected/extensions/ directory.
 
-You can then either import the extenstion so that it is loaded globally by adding it to protected\config\main.php
+You can then either import the extension so that it is loaded globally by adding it to protected\config\main.php
 
 ```
 'import' => array(
     'application.models.*',
     'application.components.*',
-    'application.extensions.TabularInputManager',
+    'ext.yii-ztabularinputmanager.TabularInputManager',
 ),
 ```
 
@@ -28,7 +28,7 @@ Or you can simply include it where needed:
 ```
 <?php
 
-Yii::import('application.extensions.TabularInputManager');
+Yii::import('ext.yii-ztabularinputmanager.TabularInputManager');
 class StudentManager extends TabularInputManager
 ...
 ```
@@ -42,7 +42,7 @@ In this example, we are inserting a ClassRoom with many Students.
 To manage the Students, we will create a StudentManager in the protected/components/ directory by extending TabularInputManager:
 
 ```
-yii::import('application.extensions.TabularInputManager');
+yii::import('ext.yii-ztabularinputmanager.TabularInputManager');
 
 class StudentManager extends TabularInputManager
 {
@@ -83,7 +83,7 @@ class StudentManager extends TabularInputManager
 	 * @param $model ClassRoom - the parent model
 	 * @return TabularInputManager the newly created TabularInputManager object
 	 */
-    public function load($model) {
+    public static function load($model) {
         $return = new StudentManager;
         foreach($model->students as $item)
             $return->_items[$item->primaryKey]=$item;
