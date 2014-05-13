@@ -105,7 +105,7 @@ abstract class TabularInputManager extends CComponent {
     public function validate() {
         $valid = true;
         /** @var $item CActiveRecord */
-        foreach ($this->_items as $i => $item) {
+        foreach ((array)$this->_items as $i => $item) {
             //we want to validate all tags, even if there are errors
             $valid = $item->validate() && $valid;
         }
@@ -119,11 +119,8 @@ abstract class TabularInputManager extends CComponent {
     public function save($parent) {
         $itemsOk = array();
 
-        if(empty($this->_items)){
-            return false;
-        }
         // Add the new items
-        foreach ($this->_items as $i => $item) {
+        foreach ((array)$this->_items as $i => $item) {
             /** @var $item CActiveRecord */
             $this->setUnsafeAttribute($item, $parent);
             $item->save();
