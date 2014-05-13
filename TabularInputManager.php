@@ -119,6 +119,9 @@ abstract class TabularInputManager extends CComponent {
     public function save($parent) {
         $itemsOk = array();
 
+        if(empty($this->_items)){
+            return false;
+        }
         // Add the new items
         foreach ($this->_items as $i => $item) {
             /** @var $item CActiveRecord */
