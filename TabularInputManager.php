@@ -153,5 +153,5 @@ abstract class TabularInputManager extends CComponent {
      * @param $parent CActiveRecord - the parent model
      * @return TabularInputManager the newly created TabularInputManager
      */
-    public abstract static function load(CActiveRecord $parent);
+    public abstract function load(CActiveRecord $parent);
 }
